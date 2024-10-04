@@ -1,0 +1,151 @@
+/* Reseteo básico para márgenes y rellenos */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    overflow: hidden; /* Elimina la barra de desplazamiento en el cuerpo */
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    margin: 0;
+}
+
+header {
+    background-color: #194577; /* Color del fondo del encabezado */
+    color: white;
+    padding: 10px;
+    text-align: center;
+    width: 100%;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.header-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo {
+    width: 90px; /* Tamaño del logo */
+    height: auto;
+}
+
+h1 {
+    margin: 0;
+    font-size: 4em; /* Tamaño de fuente del encabezado */
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex: 1;
+    padding: 20px;
+    overflow: hidden; /* Evita el desbordamiento de contenido */
+}
+
+h2 {
+    font-size: 10em; /* Ajusta el tamaño del texto del turno */
+    margin-bottom: 20px;
+    text-align: center;
+    color: #194577; /* Color del texto del turno */
+}
+
+.buttons {
+    display: flex;
+    gap: 20px; /* Espacio entre los botones */
+    margin-bottom: 20px;
+}
+
+input-container {
+    display: flex;
+    align-items: center;
+    gap: 10px; /* Espacio entre el campo de entrada y el botón */
+    margin-bottom: 20px;
+}
+
+/* Estilo general de los botones */
+button {
+    font-size: 1.2em;
+    padding: 12px 24px;
+    margin: 10px;
+    cursor: pointer;
+    border: none;
+    border-radius: 8px;
+    background-color: #007bff;
+    color: white;
+    transition: all 0.3s ease;
+    width: auto; /* Ajusta el ancho automáticamente */
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra suave */
+}
+
+button:hover {
+    background-color: #0056b3; /* Color de fondo en hover */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); /* Aumenta la sombra en hover */
+}
+
+button:active {
+    background-color: #004494; /* Color de fondo en estado activo */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Sombra reducida en estado activo */
+}
+
+input-container {
+    display: flex;
+    align-items: center;
+    gap: 15px; /* Espacio entre el campo de entrada y el botón */
+    margin-bottom: 20px;
+}
+
+input {
+    font-size: 1em;
+    padding: 10px;
+    border: 2px solid #007bff;
+    border-radius: 8px;
+    width: 150px;
+    transition: border-color 0.3s ease;
+}
+
+input::placeholder {
+    color: #007bff;
+}
+
+input:focus {
+    outline: none;
+    border-color: #0056b3;
+}
+
+/* Media query para pantallas pequeñas */
+@media (max-width: 600px) {
+    .header-container {
+        flex-direction: column;
+        gap: 5px;
+    }
+    
+    h1 {
+        font-size: 2em;
+    }
+
+    h2 {
+        font-size: 6em; /* Ajusta el tamaño del texto del turno para pantallas pequeñas */
+    }
+
+    button {
+        width: 120px;
+        font-size: 1em;
+    }
+
+    input {
+        width: 120px;
+        font-size: 0.9em;
+    }
+}
